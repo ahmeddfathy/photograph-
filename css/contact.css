@@ -1,0 +1,527 @@
+/* Variables */
+:root {
+    /* Colors & Gradients */
+    --primary-gradient: linear-gradient(135deg, #30B6C9 0%, #2BA7B9 100%);
+    --secondary-gradient: linear-gradient(135deg, #2BA7B9 0%, #259AAB 100%);
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    
+    /* Typography */
+    --heading-font-size-lg: 3.8rem;
+    --heading-font-size-md: 2.2rem;
+    --heading-font-size-sm: 1.8rem;
+    --body-font-size: 1.1rem;
+    --line-height-lg: 1.8;
+    --line-height-md: 1.6;
+    --letter-spacing: 0.5px;
+    
+    /* Spacing */
+    --section-spacing-lg: 8rem;
+    --section-spacing-md: 6rem;
+    --card-spacing: 2.8rem;
+    --element-spacing: 1.5rem;
+    
+    /* Effects */
+    --card-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.1) 100%);
+    --hover-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.15) 100%);
+    --blur-effect: blur(10px);
+    
+    /* Shadows */
+    --shadow-sm: 0 8px 20px rgba(43, 167, 185, 0.15);
+    --shadow-lg: 0 15px 30px rgba(43, 167, 185, 0.25);
+    
+    /* Transitions */
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* WhatsApp Colors */
+    --whatsapp-gradient: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    --whatsapp-hover: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+}
+
+/* Common Styles */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: var(--blur-effect);
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+}
+
+.glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.glass-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-gradient);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.glass-card:hover::before {
+    opacity: 1;
+}
+
+.icon-style {
+    position: relative;
+    z-index: 1;
+    transition: var(--transition);
+}
+
+.icon-style:hover {
+    transform: scale(1.1) rotate(10deg);
+}
+
+/* Header Section */
+.curved-section {
+    background: var(--primary-gradient);
+    color: white;
+    padding: var(--section-spacing-lg) 0 calc(var(--section-spacing-lg) + 4rem);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: -8rem;
+}
+
+.curved-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%23ffffff' fill-opacity='0.1' d='M0,128L48,144C96,160,192,192,288,197.3C384,203,480,181,576,181.3C672,181,768,203,864,208C960,213,1056,203,1152,170.7C1248,139,1344,85,1392,58.7L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E") no-repeat bottom;
+    background-size: cover;
+    opacity: 0.15;
+    animation: wave 15s linear infinite;
+}
+
+.curved-section::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: white;
+    clip-path: ellipse(60% 60% at 50% 100%);
+}
+
+.curved-section h1 {
+    font-size: var(--heading-font-size-lg);
+    font-weight: 800;
+    margin-bottom: var(--element-spacing);
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    letter-spacing: var(--letter-spacing);
+}
+
+.curved-section p {
+    font-size: var(--body-font-size);
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: var(--line-height-lg);
+    letter-spacing: var(--letter-spacing);
+}
+
+/* Contact Cards Section */
+.contact-info {
+    position: relative;
+    z-index: 2;
+    padding: var(--section-spacing-md) 0;
+}
+
+.contact-info-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: var(--card-spacing);
+    text-align: center;
+    transition: var(--transition);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover::before {
+    opacity: 1;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-info-card h3 {
+    color: white;
+    font-size: var(--heading-font-size-sm);
+    font-weight: 700;
+    margin-bottom: var(--element-spacing);
+    position: relative;
+    letter-spacing: var(--letter-spacing);
+}
+
+.contact-info-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--body-font-size);
+    line-height: var(--line-height-md);
+    margin-bottom: calc(var(--element-spacing) * 1.5);
+    position: relative;
+    letter-spacing: var(--letter-spacing);
+}
+
+/* Contact Links */
+.contact-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1rem 1.8rem;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+    margin-bottom: var(--element-spacing);
+    backdrop-filter: blur(5px);
+    font-size: var(--body-font-size);
+    letter-spacing: var(--letter-spacing);
+}
+
+.contact-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-link i {
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.contact-link.whatsapp {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    border: none;
+}
+
+.contact-link.whatsapp:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.social-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px) rotate(8deg);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Get Directions Link */
+.directions-link {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 0.8rem 1.5rem;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 1.5rem;
+    backdrop-filter: blur(5px);
+}
+
+.directions-link:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.directions-link i {
+    margin-left: 0.8rem;
+    font-size: 1.2rem;
+}
+
+/* Map Section */
+.map-section {
+    background: white;
+    padding: 5rem 0;
+    position: relative;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    height: 450px;
+    transition: var(--transition);
+}
+
+.map-container:hover {
+    transform: translateY(-8px);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Business Hours Section */
+.business-hours {
+    background: var(--secondary-gradient);
+    padding: var(--section-spacing-md) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hours-card {
+    composes: glass-card;
+    padding: var(--card-spacing);
+    text-align: center;
+}
+
+.hours-card i {
+    font-size: 3.2rem;
+    margin-bottom: var(--element-spacing);
+    color: white;
+}
+
+.hours-card h3 {
+    font-size: var(--heading-font-size-md);
+    margin-bottom: var(--element-spacing);
+    font-weight: 700;
+    letter-spacing: var(--letter-spacing);
+}
+
+.hours-card .subtitle {
+    margin-bottom: calc(var(--element-spacing) * 1.8);
+    font-size: var(--body-font-size);
+    opacity: 0.9;
+    letter-spacing: var(--letter-spacing);
+}
+
+.time-block {
+    background: var(--glass-bg);
+    border-radius: 12px;
+    padding: calc(var(--element-spacing) * 1.2);
+    margin-bottom: var(--element-spacing);
+    transition: var(--transition);
+}
+
+.time-block:hover {
+    background: var(--hover-gradient);
+    transform: translateY(-5px);
+}
+
+.time-block h5 {
+    margin-bottom: var(--element-spacing);
+    font-size: calc(var(--body-font-size) * 1.1);
+    font-weight: 600;
+    letter-spacing: var(--letter-spacing);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.time i {
+    font-size: 1.1rem;
+    color: white;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes wave {
+    0% { background-position-x: 0; }
+    100% { background-position-x: 1440px; }
+}
+
+.contact-animation {
+    animation: float 5s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    :root {
+        --heading-font-size-lg: 3.2rem;
+        --heading-font-size-md: 2rem;
+        --heading-font-size-sm: 1.6rem;
+        --body-font-size: 1rem;
+        --section-spacing-lg: 6rem;
+        --section-spacing-md: 4rem;
+        --card-spacing: 2.2rem;
+        --element-spacing: 1.2rem;
+    }
+
+    .curved-section {
+        padding: var(--section-spacing-md) 0 calc(var(--section-spacing-md) + 4rem);
+    }
+
+    .curved-section h1 {
+        font-size: var(--heading-font-size-lg);
+    }
+
+    .curved-section p {
+        font-size: var(--body-font-size);
+    }
+
+    .contact-info-card {
+        padding: var(--card-spacing);
+    }
+    
+    .map-container {
+        height: 400px;
+    }
+    
+    .hours-card {
+        padding: var(--card-spacing);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --heading-font-size-lg: 2.8rem;
+        --heading-font-size-md: 1.8rem;
+        --heading-font-size-sm: 1.4rem;
+        --body-font-size: 0.95rem;
+        --section-spacing-lg: 5rem;
+        --section-spacing-md: 3.5rem;
+        --card-spacing: 2rem;
+        --element-spacing: 1rem;
+    }
+
+    .curved-section {
+        padding: var(--section-spacing-md) 0 calc(var(--section-spacing-md) + 4rem);
+    }
+
+    .curved-section h1 {
+        font-size: var(--heading-font-size-lg);
+    }
+
+    .contact-info-card {
+        margin-bottom: var(--element-spacing);
+        padding: var(--card-spacing);
+    }
+    
+    .map-container {
+        height: 350px;
+    }
+    
+    .time-block {
+        margin-bottom: var(--element-spacing);
+    }
+
+    .contact-info-card h3 {
+        font-size: var(--heading-font-size-sm);
+    }
+
+    .contact-info-card p {
+        font-size: var(--body-font-size);
+    }
+
+    .contact-link,
+    .directions-link {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .social-link {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --heading-font-size-lg: 2.4rem;
+        --heading-font-size-md: 1.6rem;
+        --heading-font-size-sm: 1.3rem;
+        --body-font-size: 0.9rem;
+        --section-spacing-lg: 4rem;
+        --section-spacing-md: 3rem;
+        --card-spacing: 1.8rem;
+        --element-spacing: 0.8rem;
+    }
+
+    .curved-section {
+        padding: var(--section-spacing-md) 0 calc(var(--section-spacing-md) + 4rem);
+    }
+
+    .curved-section h1 {
+        font-size: var(--heading-font-size-lg);
+    }
+
+    .contact-info-card,
+    .hours-card {
+        padding: var(--card-spacing);
+    }
+
+    .time-block {
+        padding: calc(var(--element-spacing) * 1.2);
+    }
+
+    .contact-link,
+    .directions-link {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;
+    }
+} 

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الصور - استوديو التصوير العائلي</title>
+    <!-- Bootstrap RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">استوديو الذكريات</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">معرض الصور</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <section class="curved-section">
+        <div class="container">
+            <h1 class="text-center text-white mb-3">معرض الصور</h1>
+            <p class="text-center text-white mb-0">مجموعة مختارة من أفضل أعمالنا في التصوير الاحترافي</p>
+        </div>
+    </section>
+
+    <!-- Gallery Categories -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="text-center">
+                <button class="active" data-filter="all">جميع الصور</button>
+                <button data-filter="wedding">أفراح وحفلات</button>
+                <button data-filter="family">جلسات عائلية</button>
+                <button data-filter="birthday">أعياد ميلاد</button>
+                <button data-filter="portrait">بورتريه</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery">
+        <div class="container">
+            <div class="row" id="gallery-grid">
+                <!-- Gallery Items -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb" alt="لقطة عائلية">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>لقطة عائلية</h4>
+                                <p>أجمل اللحظات العائلية</p>
+                                <a href="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb" 
+                                   data-lightbox="gallery" 
+                                   data-title="لقطة عائلية - أجمل اللحظات العائلية"
+                                   class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-category="wedding">
+                    <div class="gallery-item glass-effect">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="حفل زفاف">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>حفل زفاف</h4>
+                                <p>توثيق أجمل لحظات العمر</p>
+                                <a href="https://images.unsplash.com/photo-1519741497674-611481863552" 
+                                   data-lightbox="gallery" 
+                                   class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item glass-effect">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="صورة عائلية">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>جلسة عائلية</h4>
+                                <p>ذكريات لا تنسى</p>
+                                <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" 
+                                   data-lightbox="gallery" 
+                                   class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-category="birthday">
+                    <div class="gallery-item glass-effect">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929" alt="حفل عيد ميلاد">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>عيد ميلاد</h4>
+                                <p>لحظات السعادة</p>
+                                <a href="https://images.unsplash.com/photo-1484723091739-30a097e8f929" 
+                                   data-lightbox="gallery" 
+                                   class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-category="wedding">
+                    <div class="gallery-item glass-effect">
+                      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="صورة عائلية" class="img-fluid">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>جلسة خارجية</h4>
+                                <p>لقطات طبيعية</p>
+                                <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" 
+                                   data-lightbox="gallery" 
+                                   class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4" data-category="birthday">
+                    <div class="gallery-item glass-effect">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" alt="لحظات سعيدة">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>لحظات سعيدة</h4>
+                                <p>ابتسامات وفرح</p>
+                                <a href="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" 
+                                   data-lightbox="gallery" 
+                                   class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>استوديو الذكريات</h3>
+                    <p>نحول لحظاتك الخاصة إلى ذكريات خالدة</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>تواصل معنا</h3>
+                    <p>
+                        <i class="fas fa-phone"></i> +966 50 000 0000<br>
+                        <i class="fas fa-envelope"></i> info@studio.com
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>تابعنا على</h3>
+                    <div class="social-links">
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <p>&copy; 2024 استوديو الذكريات. جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <!-- Gallery Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const filterButtons = document.querySelectorAll('.gallery-filter button');
+            const galleryItems = document.querySelectorAll('#gallery-grid .col-md-4');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    const filterValue = this.getAttribute('data-filter');
+
+                    galleryItems.forEach(item => {
+                        const itemCategory = item.getAttribute('data-category');
+                        
+                        // Reset animation
+                        item.style.animation = 'none';
+                        item.offsetHeight; // Trigger reflow
+                        
+                        if (filterValue === 'all' || filterValue === itemCategory) {
+                            item.style.display = 'block';
+                            item.style.animation = 'fadeIn 0.6s ease forwards';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Initialize Lightbox with custom options
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'showImageNumberLabel': false,
+                'fadeDuration': 300,
+                'imageFadeDuration': 300,
+                'alwaysShowNavOnTouchDevices': true
+            });
+        });
+    </script>
+</body>
+</html> 
