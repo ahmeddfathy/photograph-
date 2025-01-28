@@ -15,6 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -71,69 +72,15 @@
     <section class="gallery">
         <div class="container">
             <div class="row" id="gallery-grid">
-                <!-- Gallery Items -->
-                <div class="col-md-4" data-category="family">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb" alt="لقطة عائلية">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>لقطة عائلية</h4>
-                                <p>أجمل اللحظات العائلية</p>
-                                <a href="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb" 
-                                   data-lightbox="gallery" 
-                                   data-title="لقطة عائلية - أجمل اللحظات العائلية"
-                                   class="gallery-icon">
-                                    <i class="fas fa-expand"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- Wedding Photos -->
                 <div class="col-md-4" data-category="wedding">
-                    <div class="gallery-item glass-effect">
+                    <div class="gallery-item">
                         <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="حفل زفاف">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
                                 <h4>حفل زفاف</h4>
                                 <p>توثيق أجمل لحظات العمر</p>
-                                <a href="https://images.unsplash.com/photo-1519741497674-611481863552" 
-                                   data-lightbox="gallery" 
-                                   class="gallery-icon">
-                                    <i class="fas fa-expand"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4" data-category="family">
-                    <div class="gallery-item glass-effect">
-                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="صورة عائلية">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>جلسة عائلية</h4>
-                                <p>ذكريات لا تنسى</p>
-                                <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" 
-                                   data-lightbox="gallery" 
-                                   class="gallery-icon">
-                                    <i class="fas fa-expand"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4" data-category="birthday">
-                    <div class="gallery-item glass-effect">
-                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929" alt="حفل عيد ميلاد">
-                        <div class="gallery-overlay">
-                            <div class="gallery-info">
-                                <h4>عيد ميلاد</h4>
-                                <p>لحظات السعادة</p>
-                                <a href="https://images.unsplash.com/photo-1484723091739-30a097e8f929" 
-                                   data-lightbox="gallery" 
-                                   class="gallery-icon">
+                                <a href="https://images.unsplash.com/photo-1519741497674-611481863552" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
                             </div>
@@ -142,15 +89,13 @@
                 </div>
 
                 <div class="col-md-4" data-category="wedding">
-                    <div class="gallery-item glass-effect">
-                      <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="صورة عائلية" class="img-fluid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="حفل زفاف خارجي">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>جلسة خارجية</h4>
-                                <p>لقطات طبيعية</p>
-                                <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" 
-                                   data-lightbox="gallery" 
-                                   class="gallery-icon">
+                                <h4>زفاف في الطبيعة</h4>
+                                <p>لحظات رومانسية خالدة</p>
+                                <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
                             </div>
@@ -158,16 +103,111 @@
                     </div>
                 </div>
 
-                <div class="col-md-4" data-category="birthday">
-                    <div class="gallery-item glass-effect">
-                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" alt="لحظات سعيدة">
+                <!-- Family Photos -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb" alt="جلسة عائلية">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>لحظات سعيدة</h4>
-                                <p>ابتسامات وفرح</p>
-                                <a href="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" 
-                                   data-lightbox="gallery" 
-                                   class="gallery-icon">
+                                <h4>لحظات عائلية</h4>
+                                <p>ذكريات لا تنسى</p>
+                                <a href="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portrait Photos -->
+                <div class="col-md-4" data-category="portrait">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04" alt="بورتريه شخصي">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>بورتريه احترافي</h4>
+                                <p>صور شخصية مميزة</p>
+                                <a href="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birthday Photos -->
+                <div class="col-md-4" data-category="birthday">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929" alt="حفل عيد ميلاد">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>أعياد ميلاد</h4>
+                                <p>لحظات الفرح والسعادة</p>
+                                <a href="https://images.unsplash.com/photo-1484723091739-30a097e8f929" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Wedding Photos -->
+                <div class="col-md-4" data-category="wedding">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b" alt="حفل زفاف">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>لحظات خاصة</h4>
+                                <p>ذكريات العمر</p>
+                                <a href="https://images.unsplash.com/photo-1537633552985-df8429e8048b" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Family Photos -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1581952976147-5a2d15560349" alt="جلسة عائلية">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>لقطات عائلية</h4>
+                                <p>أجواء دافئة</p>
+                                <a href="https://images.unsplash.com/photo-1581952976147-5a2d15560349" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Portrait Photos -->
+                <div class="col-md-4" data-category="portrait">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb" alt="بورتريه">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>بورتريه فني</h4>
+                                <p>إبداع في التصوير</p>
+                                <a href="https://images.unsplash.com/photo-1534528741775-53994a69daeb" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Birthday Photos -->
+                <div class="col-md-4" data-category="birthday">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" alt="عيد ميلاد">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>احتفالات مميزة</h4>
+                                <p>فرحة لا تنسى</p>
+                                <a href="https://images.unsplash.com/photo-1502920917128-1aa500764cbd" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
                             </div>

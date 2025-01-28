@@ -13,6 +13,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -37,7 +38,7 @@
                         <a class="nav-link" href="about.html">من نحن</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="contact.html" aria-current="page">تواصل معنا</a>
+                        <a class="nav-link active" href="contact.html">اتصل بنا</a>
                     </li>
                 </ul>
             </div>
@@ -45,10 +46,10 @@
     </nav>
 
     <!-- Contact Header -->
-    <section class="curved-section">
+    <section class="contact-header">
         <div class="container">
-            <h1 class="text-center">تواصل معنا</h1>
-            <p class="text-center">نسعد بتواصلكم معنا في أي وقت. فريقنا جاهز لخدمتكم والإجابة على جميع استفساراتكم</p>
+            <h1>تواصل معنا</h1>
+            <p>نسعد بتواصلكم معنا في أي وقت. فريقنا جاهز لخدمتكم والإجابة على جميع استفساراتكم</p>
         </div>
     </section>
 
@@ -56,49 +57,136 @@
     <section class="contact-info">
         <div class="container">
             <div class="row g-4">
+                <!-- Direct Contact -->
                 <div class="col-md-4">
-                    <div class="contact-info-card">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h3>اتصل بنا</h3>
+                        <p>نحن متواجدون لخدمتكم وتلبية استفساراتكم خلال ساعات العمل</p>
+                        <ul class="contact-info-list">
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                +966 50 000 0000
+                            </li>
+                            <li>
+                                <i class="fas fa-phone"></i>
+                                +966 50 000 0001
+                            </li>
+                        </ul>
+                        <div class="social-links-wrapper">
+                            <div class="social-links">
+                                <a href="https://wa.me/966500000000" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                                <a href="tel:+966500000000">
+                                    <i class="fas fa-phone"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Contact -->
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
                         <h3>راسلنا</h3>
                         <p>نستقبل رسائلكم على مدار الساعة وسنقوم بالرد خلال ساعات العمل</p>
-                        <a href="mailto:info@studio.com" class="contact-link">
-                            <i class="fas fa-envelope"></i>
-                            info@studio.com
-                        </a>
-                        <div class="social-links">
-                            <a href="#" class="social-link" title="فيسبوك">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" class="social-link" title="تويتر">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                            <a href="#" class="social-link" title="انستغرام">
-                                <i class="fab fa-instagram"></i>
-                            </a>
+                        <ul class="contact-info-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                info@studio.com
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                support@studio.com
+                            </li>
+                        </ul>
+                        <div class="social-links-wrapper">
+                            <div class="social-links">
+                                <a href="mailto:info@studio.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-share-alt"></i>
+                        </div>
+                        <h3>تابعنا</h3>
+                        <p>تابعنا على منصات التواصل الاجتماعي للاطلاع على أحدث أعمالنا وعروضنا</p>
+                        <div class="social-links-wrapper">
+                            <div class="social-links">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-snapchat-ghost"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Hours -->
+    <section class="business-hours">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>أيام الأسبوع</h3>
+                        <p>من الأحد إلى الخميس</p>
+                        <div class="time">
+                            <i class="far fa-clock"></i>
+                            <span>9:00 صباحاً - 10:00 مساءً</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <h3>اتصل بنا</h3>
-                        <p>نحن متواجدون لخدمتكم وتلبية استفساراتكم خلال ساعات العمل</p>
-                        <a href="tel:+966500000000" class="contact-link">
-                            <i class="fas fa-phone-alt"></i>
-                            +966 50 000 0000
-                        </a>
-                        <a href="https://wa.me/966500000000" class="contact-link whatsapp">
-                            <i class="fab fa-whatsapp"></i>
-                            تواصل عبر واتساب
-                        </a>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>الجمعة</h3>
+                        <p>عطلة نهاية الأسبوع</p>
+                        <div class="time">
+                            <i class="far fa-clock"></i>
+                            <span>4:00 عصراً - 10:00 مساءً</span>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="contact-info-card">
-                        <h3>موقعنا</h3>
-                        <p>نسعد بزيارتكم في فرعنا الرئيسي<br>شارع الملك فهد، حي الورود<br>الرياض، المملكة العربية السعودية</p>
-                        <a href="https://goo.gl/maps/your-location" class="directions-link" target="_blank" rel="noopener">
-                            <i class="fas fa-directions"></i>
-                            احصل على الاتجاهات
-                        </a>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>السبت</h3>
+                        <p>نهاية الأسبوع</p>
+                        <div class="time">
+                            <i class="far fa-clock"></i>
+                            <span>9:00 صباحاً - 10:00 مساءً</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -112,52 +200,17 @@
                 <iframe 
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.674754711131!2d46.6752!3d24.7136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjTCsDQyJzQ5LjAiTiA0NsKwNDAnMzAuNyJF!5e0!3m2!1sen!2ssa!4v1635000000000!5m2!1sen!2ssa" 
                     allowfullscreen="" 
-                    loading="lazy" 
-                    title="موقعنا على الخريطة"
-                    aria-label="خريطة تظهر موقع الاستوديو">
+                    loading="lazy"
+                    title="موقعنا على الخريطة">
                 </iframe>
             </div>
-        </div>
-    </section>
-
-    <!-- Business Hours -->
-    <section class="business-hours">
-        <div class="container">
-            <div class="hours-card">
-                <div class="text-center mb-4">
-                    <i class="fas fa-clock" aria-hidden="true"></i>
-                    <h3>ساعات العمل</h3>
-                    <p class="subtitle">نسعد بخدمتكم خلال الأوقات التالية</p>
-                </div>
-                <div class="row text-center g-4">
-                    <div class="col-md-4">
-                        <div class="time-block">
-                            <h5>أيام الأسبوع</h5>
-                            <div class="time">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                <span>9:00 صباحاً - 10:00 مساءً</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="time-block">
-                            <h5>الجمعة</h5>
-                            <div class="time">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                <span>4:00 عصراً - 10:00 مساءً</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="time-block">
-                            <h5>السبت</h5>
-                            <div class="time">
-                                <i class="far fa-clock" aria-hidden="true"></i>
-                                <span>9:00 صباحاً - 10:00 مساءً</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="location-card">
+                <h3>موقعنا</h3>
+                <p>شارع الملك فهد، حي الورود<br>الرياض، المملكة العربية السعودية</p>
+                <a href="https://goo.gl/maps/your-location" class="btn" target="_blank">
+                    <i class="fas fa-directions ms-2"></i>
+                    احصل على الاتجاهات
+                </a>
             </div>
         </div>
     </section>
@@ -173,22 +226,16 @@
                 <div class="col-md-4">
                     <h3>تواصل معنا</h3>
                     <p>
-                        <i class="fas fa-phone-alt" aria-hidden="true"></i> +966 50 000 0000<br>
-                        <i class="fas fa-envelope" aria-hidden="true"></i> info@studio.com
+                        <i class="fas fa-phone"></i> +966 50 000 0000<br>
+                        <i class="fas fa-envelope"></i> info@studio.com
                     </p>
                 </div>
                 <div class="col-md-4">
                     <h3>تابعنا على</h3>
                     <div class="social-links">
-                        <a href="#" class="me-2" aria-label="فيسبوك">
-                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="me-2" aria-label="انستغرام">
-                            <i class="fab fa-instagram" aria-hidden="true"></i>
-                        </a>
-                        <a href="#" class="me-2" aria-label="تويتر">
-                            <i class="fab fa-twitter" aria-hidden="true"></i>
-                        </a>
+                        <a href="#" class="me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="me-2"><i class="fab fa-twitter"></i></a>
                     </div>
                 </div>
             </div>
@@ -201,4 +248,4 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
+</html> 

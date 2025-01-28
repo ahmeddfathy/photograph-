@@ -15,6 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- Navigation -->
@@ -47,14 +48,14 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('https://images.unsplash.com/photo-1533747732305-e24a1ef8ee96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
+    <section class="hero" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1566004100631-35d015d6a491?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');">
         <div class="hero-content">
             <div class="container">
-                <h1>نحول لحظاتك إلى ذكريات خالدة</h1>
-                <p>نقدم خدمات تصوير احترافية لجميع المناسبات العائلية والأفراح وأعياد الميلاد</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="contact.html" class="btn btn-primary">احجز جلستك الآن</a>
-                    <a href="gallery.html" class="btn btn-primary">معرض أعمالنا</a>
+                <h1 class="display-3 fw-bold mb-4">نوثق لحظات طفلك الثمينة</h1>
+                <p class="lead mb-5">نقدم خدمات تصوير احترافية للمواليد والأطفال لتخليد ذكرياتهم الجميلة</p>
+                <div class="d-flex justify-content-center gap-4">
+                    <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3">احجز جلسة تصوير</a>
+                    <a href="gallery.html" class="btn btn-outline-light btn-lg px-5 py-3">معرض أعمالنا</a>
                 </div>
             </div>
         </div>
@@ -72,23 +73,23 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="service-card glass-card">
+                        <i class="fas fa-baby"></i>
+                        <h3>تصوير المواليد</h3>
+                        <p>نوثق أول لحظات طفلك بأسلوب فني وآمن</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card glass-card">
+                        <i class="fas fa-child"></i>
+                        <h3>تصوير الأطفال</h3>
+                        <p>نلتقط ضحكات وبراءة طفلك في جلسات تصوير مرحة</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card glass-card">
                         <i class="fas fa-camera"></i>
-                        <h3>تصوير الأفراح</h3>
-                        <p>نوثق أجمل لحظات يومك الخاص باحترافية عالية</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card glass-card">
-                        <i class="fas fa-birthday-cake"></i>
-                        <h3>حفلات أعياد الميلاد</h3>
-                        <p>نلتقط أسعد لحظات الاحتفال مع العائلة والأصدقاء</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card glass-card">
-                        <i class="fas fa-users"></i>
-                        <h3>جلسات تصوير عائلية</h3>
-                        <p>نصنع ذكريات عائلية جميلة تدوم مدى الحياة</p>
+                        <h3>تصوير استوديو</h3>
+                        <p>جلسات تصوير احترافية في استوديو مجهز خصيصاً للأطفال</p>
                     </div>
                 </div>
             </div>
@@ -107,12 +108,12 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="gallery-item glass-effect">
-                        <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" alt="صورة عائلية" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9" alt="تصوير أطفال" class="img-fluid">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>جلسة عائلية</h4>
-                                <p>ذكريات لا تنسى</p>
-                                <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" data-lightbox="gallery" class="gallery-icon">
+                                <h4>تصوير أطفال</h4>
+                                <p>لحظات البراءة والسعادة</p>
+                                <a href="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
                             </div>
@@ -121,12 +122,12 @@
                 </div>
                 <div class="col-md-4">
                     <div class="gallery-item glass-effect">
-                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552" alt="حفل زفاف" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b" alt="تصوير رضع" class="img-fluid">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>حفل زفاف</h4>
-                                <p>لحظات سعيدة</p>
-                                <a href="https://images.unsplash.com/photo-1519741497674-611481863552" data-lightbox="gallery" class="gallery-icon">
+                                <h4>تصوير رضع</h4>
+                                <p>لحظات النوم الهادئة</p>
+                                <a href="https://images.unsplash.com/photo-1544126592-807ade215a0b" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
                             </div>
@@ -135,12 +136,12 @@
                 </div>
                 <div class="col-md-4">
                     <div class="gallery-item glass-effect">
-                        <img src="https://images.unsplash.com/photo-1484723091739-30a097e8f929" alt="عيد ميلاد" class="img-fluid">
+                        <img src="https://images.unsplash.com/photo-1555252333-9f8e92e65df9" alt="لحظات عفوية" class="img-fluid">
                         <div class="gallery-overlay">
                             <div class="gallery-info">
-                                <h4>عيد ميلاد</h4>
-                                <p>أجواء مميزة</p>
-                                <a href="https://images.unsplash.com/photo-1484723091739-30a097e8f929" data-lightbox="gallery" class="gallery-icon">
+                                <h4>لحظات عفوية</h4>
+                                <p>ابتسامات طبيعية</p>
+                                <a href="https://images.unsplash.com/photo-1555252333-9f8e92e65df9" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
                             </div>
@@ -149,8 +150,247 @@
                 </div>
             </div>
             <div class="text-center mt-5">
-                <a href="gallery.html" class="btn btn-primary btn-lg">شاهد المزيد من أعمالنا</a>
+                <a href="gallery.html" class="btn btn-primary btn-lg px-5">شاهد المزيد من أعمالنا</a>
             </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="section-title">نبذة عنا</h2>
+                        <p class="section-description">
+                            نحن في استوديو الذكريات نؤمن بأن كل لحظة تستحق التوثيق. منذ عام 2010، نقدم خدمات تصوير احترافية تجمع بين الإبداع والجودة العالية. نمتلك فريقاً من المصورين المحترفين الذين يتميزون بالخبرة والشغف لالتقاط أجمل اللحظات وتحويلها إلى ذكريات خالدة.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32" alt="استوديو الذكريات" class="img-fluid rounded-3 shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="vision-mission-section py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="vision-card text-center p-4 rounded-3 shadow-sm">
+                        <i class="fas fa-eye mb-3 text-primary fa-2x"></i>
+                        <h3>رؤيتنا</h3>
+                        <p>أن نكون الوجهة الأولى في المملكة العربية السعودية لتوثيق اللحظات الثمينة بأسلوب فني مميز وجودة عالية.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="mission-card text-center p-4 rounded-3 shadow-sm">
+                        <i class="fas fa-bullseye mb-3 text-primary fa-2x"></i>
+                        <h3>رسالتنا</h3>
+                        <p>تقديم خدمات تصوير احترافية تلبي تطلعات عملائنا وتفوق توقعاتهم، مع الحفاظ على أعلى معايير الجودة والإبداع في كل صورة نلتقطها.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">الأسئلة الشائعة</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            ما هي مواعيد العمل لديكم؟
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            نعمل من السبت إلى الخميس، من الساعة 10 صباحاً حتى 10 مساءً. الجمعة نعمل بموعد مسبق فقط.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            كيف يمكنني حجز جلسة تصوير؟
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            يمكنك حجز جلسة تصوير من خلال الاتصال بنا مباشرة أو عبر نموذج الحجز في موقعنا. نحتاج إلى حجز مسبق بـ 48 ساعة على الأقل.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            كم تستغرق جلسة التصوير؟
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            تختلف مدة الجلسة حسب نوع التصوير، ولكن عادةً تستغرق الجلسة العائلية ساعة إلى ساعتين، وجلسات المناسبات تحدد حسب الاتفاق.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                            متى يتم تسليم الصور؟
+                        </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            يتم تسليم الصور خلال 3-5 أيام عمل من تاريخ جلسة التصوير. للمناسبات الخاصة والأعراس قد يستغرق الأمر 7-10 أيام عمل.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="statistics-section py-5">
+        <div class="wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card glass-effect">
+                        <i class="fas fa-smile mb-3"></i>
+                        <h3 class="counter">5000</h3>
+                        <p>عميل سعيد</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card glass-effect">
+                        <i class="fas fa-camera mb-3"></i>
+                        <h3 class="counter">15000</h3>
+                        <p>صورة ملتقطة</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card glass-effect">
+                        <i class="fas fa-certificate mb-3"></i>
+                        <h3 class="counter">10</h3>
+                        <p>سنوات خبرة</p>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stat-card glass-effect">
+                        <i class="fas fa-award mb-3"></i>
+                        <h3 class="counter">25</h3>
+                        <p>جائزة تصوير</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5">آراء عملائنا</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card glass-effect">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-right mb-3"></i>
+                            <p>تجربة رائعة مع استوديو الذكريات. الصور كانت أكثر من رائعة والتعامل كان محترف جداً.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>سارة أحمد</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card glass-effect">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-right mb-3"></i>
+                            <p>جودة الصور والاحترافية في التعامل جعلتني أتعامل معهم بشكل مستمر. أنصح بهم بشدة.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>محمد خالد</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial-card glass-effect">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-right mb-3"></i>
+                            <p>الاستوديو مجهز بأحدث المعدات والكاميرات، والنتيجة النهائية كانت مبهرة.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>نورة سعد</h4>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section py-5">
+        <div class="wave-top">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="container">
+            <div class="cta-content text-center glass-effect">
+                <h2>هل تريد توثيق لحظاتك الجميلة؟</h2>
+                <p class="mb-4">دعنا نساعدك في تخليد ذكرياتك بأجمل صورة</p>
+                <a href="contact.html" class="btn btn-primary btn-lg">احجز جلستك الآن</a>
+            </div>
+        </div>
+        <div class="wave-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
         </div>
     </section>
 
@@ -202,6 +442,16 @@
             'resizeDuration': 200,
             'wrapAround': true,
             'showImageNumberLabel': false
+        });
+    </script>
+    <!-- Add before the footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script>
+        // Counter Up Animation
+        $('.counter').counterUp({
+            delay: 10,
+            time: 1000
         });
     </script>
 </body>
