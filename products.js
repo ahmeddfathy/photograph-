@@ -1,178 +1,225 @@
-// Sample product data
+// بيانات المنتجات
 const products = [
     {
         id: 1,
-        name: "باقة المولود الجديد",
-        price: 799.99,
-        category: "newborn",
+        name: "ألبوم صور فاخر",
+        price: 299.99,
+        category: "albums",
         images: [
-            "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500",
-            "https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500",
+            "https://images.unsplash.com/photo-1544377193-33dcf4d68fb5",
+            "https://images.unsplash.com/photo-1542049943556-ed37bdd10ead",
         ],
-        description: "باقة تصوير متكاملة للمواليد من عمر 14 يوم، تشمل جلسة تصوير احترافية مع الأكسسوارات وألبوم صور فاخر.",
+        description: "ألبوم صور فاخر مصنوع من أجود أنواع الجلد، مع 40 صفحة وتصميم عصري أنيق.",
         featured: true,
-        rating: 4.9,
-        reviews: 128,
-        includes: [
-            "جلسة تصوير لمدة ساعتين",
-            "20 صورة معدلة احترافياً",
-            "ألبوم صور فاخر",
-            "5 صور مطبوعة مقاس A4",
-            "قالب فني لليد والقدم"
-        ]
+        rating: 4.8,
+        reviews: 125
     },
     {
         id: 2,
-        name: "باقة الأطفال المميزة",
-        price: 599.99,
-        category: "children",
+        name: "إطار صور كريستال",
+        price: 149.99,
+        category: "frames",
         images: [
-            "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=500",
-            "https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=500",
+            "https://images.unsplash.com/photo-1513519245088-0e12902e5a38",
+            "https://images.unsplash.com/photo-1577083552431-6e5fd01988ec",
         ],
-        description: "باقة تصوير خاصة للأطفال من عمر 7 إلى 9 أشهر، تشمل جلسة تصوير متنوعة مع خلفيات وأكسسوارات مختلفة.",
+        description: "إطار صور كريستالي فاخر بحجم 30×40 سم، مثالي لصور البورتريه والمناسبات.",
         featured: true,
-        rating: 4.8,
-        reviews: 95,
-        includes: [
-            "جلسة تصوير لمدة ساعة ونصف",
-            "15 صورة معدلة احترافياً",
-            "ألبوم صور مخصص",
-            "3 صور مغناطيسية",
-            "صورة مكبرة مع إطار"
-        ]
+        rating: 4.6,
+        reviews: 89
     },
     {
         id: 3,
-        name: "باقة التصوير العائلي",
-        price: 999.99,
-        category: "family",
+        name: "طباعة صور فاخرة",
+        price: 79.99,
+        category: "prints",
         images: [
-            "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=500",
-            "https://images.unsplash.com/photo-1581952976147-5a2d15560349?w=500",
+            "https://images.unsplash.com/photo-1579783901586-d88db74b4fe4",
+            "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5",
         ],
-        description: "باقة تصوير شاملة للعائلة، تجمع بين الصور الفردية والجماعية مع خيارات متعددة للخلفيات والأماكن.",
-        featured: true,
+        description: "طباعة صور عالية الجودة على ورق فاخر، مقاس A3 مع معالجة خاصة للألوان.",
+        featured: false,
         rating: 4.7,
-        reviews: 67,
-        includes: [
-            "جلسة تصوير لمدة ساعتين",
-            "25 صورة معدلة احترافياً",
-            "ألبوم عائلي فاخر",
-            "5 صور مغناطيسية",
-            "لوحة جدارية كبيرة"
-        ]
+        reviews: 67
     },
     {
         id: 4,
-        name: "باقة المجسمات التذكارية",
-        price: 299.99,
-        category: "souvenirs",
+        name: "صندوق ذكريات خشبي",
+        price: 199.99,
+        category: "accessories",
         images: [
-            "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500",
-            "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=500",
+            "https://images.unsplash.com/photo-1532033375034-a29004ea9769",
+            "https://images.unsplash.com/photo-1532033375034-a29004ea9769",
         ],
-        description: "مجسمات فنية مميزة لليد والقدم، مصنوعة بأعلى جودة لتخليد ذكريات طفلك الثمينة.",
-        featured: false,
+        description: "صندوق خشبي فاخر لحفظ الصور والذكريات، مع تصميم كلاسيكي وحجم مثالي.",
+        featured: true,
         rating: 4.9,
-        reviews: 45,
-        includes: [
-            "قالب فني لليد والقدم",
-            "إطار فاخر",
-            "شهادة أصالة",
-            "علبة هدية أنيقة",
-            "خدمة توصيل مجانية"
-        ]
+        reviews: 45
     }
 ];
 
-// Function to format price
-function formatPrice(price) {
-    return price.toLocaleString('ar-SA', {
-        style: 'currency',
-        currency: 'SAR'
+// حالة السلة
+let cart = [];
+let activeFilters = {
+    categories: new Set(),
+    maxPrice: 1000,
+    size: null,
+    sortBy: 'featured'
+};
+
+// عناصر DOM
+const productGrid = document.getElementById('productGrid');
+const cartSidebar = document.getElementById('cartSidebar');
+const cartItems = document.getElementById('cartItems');
+const cartToggle = document.getElementById('cartToggle');
+const closeCart = document.getElementById('closeCart');
+const cartTotal = document.getElementById('cartTotal');
+const cartCount = document.querySelector('.cart-count');
+const priceRange = document.getElementById('priceRange');
+const priceValue = document.getElementById('priceValue');
+const sortSelect = document.querySelector('.glass-select');
+
+// تهيئة الصفحة
+document.addEventListener('DOMContentLoaded', () => {
+    displayProducts(products);
+    setupEventListeners();
+});
+
+// إعداد أحداث المستمع
+function setupEventListeners() {
+    cartToggle.addEventListener('click', toggleCart);
+    closeCart.addEventListener('click', toggleCart);
+
+    document.querySelectorAll('.form-check-input').forEach(checkbox => {
+        checkbox.addEventListener('change', handleCategoryFilter);
     });
+
+    priceRange.addEventListener('input', handlePriceFilter);
+
+    document.querySelectorAll('.size-btn').forEach(btn => {
+        btn.addEventListener('click', handleSizeFilter);
+    });
+
+    sortSelect.addEventListener('change', handleSort);
 }
 
-// Function to create product card
-function createProductCard(product) {
-    return `
-        <div class="col-lg-6 col-xl-4">
-            <div class="product-card" onclick="showProductDetails(${product.id})">
+// عرض المنتجات
+function displayProducts(productsToShow) {
+    productGrid.innerHTML = productsToShow.map(product => `
+        <div class="col-md-6 col-lg-4">
+            <div class="product-card">
                 <div class="product-image-wrapper">
                     <img src="${product.images[0]}" alt="${product.name}" class="product-image">
                 </div>
                 <div class="product-details">
                     <div class="product-category">${product.category}</div>
                     <h3 class="product-title">${product.name}</h3>
-                    <div class="product-price">${formatPrice(product.price)}</div>
-                    <div class="rating">
-                        <span class="stars">${'★'.repeat(Math.floor(product.rating))}${'☆'.repeat(5-Math.floor(product.rating))}</span>
-                        <span class="rating-count">(${product.reviews} تقييم)</span>
+                    <div class="product-rating">
+                        <div class="stars" style="--rating: ${product.rating}"></div>
+                        <span class="reviews">(${product.reviews} تقييم)</span>
                     </div>
-                    <ul class="product-includes">
-                        ${product.includes.slice(0, 3).map(item => `<li>${item}</li>`).join('')}
-                    </ul>
+                    <p class="product-price">${product.price.toFixed(2)} ريال</p>
                     <div class="product-actions">
-                        <button class="add-to-cart-btn">احجز موعد</button>
-                        <button class="view-details-btn" onclick="showProductDetails(${product.id})">
+                        <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
+                            <i class="fas fa-shopping-cart ms-2"></i>إضافة للسلة
+                        </button>
+                        <button class="view-details-btn" onclick="showProductModal(${product.id})">
                             <i class="fas fa-eye"></i>
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    `;
+    `).join('');
 }
 
-// Function to show product details in modal
-function showProductDetails(productId) {
+// وظائف السلة
+function toggleCart() {
+    cartSidebar.classList.toggle('active');
+}
+
+function addToCart(productId) {
     const product = products.find(p => p.id === productId);
-    if (!product) return;
+    const existingItem = cart.find(item => item.id === productId);
 
-    document.getElementById('modalProductName').textContent = product.name;
-    document.getElementById('modalProductDescription').textContent = product.description;
-    document.getElementById('modalProductPrice').textContent = formatPrice(product.price);
+    if (existingItem) {
+        existingItem.quantity += 1;
+    } else {
+        cart.push({ ...product, quantity: 1 });
+    }
 
-    const includesList = document.getElementById('modalProductIncludes');
-    includesList.innerHTML = product.includes.map(item => `<li>${item}</li>`).join('');
+    updateCart();
+    showToast();
+}
 
-    const carousel = document.querySelector('#productCarousel .carousel-inner');
-    carousel.innerHTML = product.images.map((img, index) => `
-        <div class="carousel-item ${index === 0 ? 'active' : ''}">
-            <img src="${img}" class="d-block w-100" alt="${product.name}">
+function removeFromCart(productId) {
+    cart = cart.filter(item => item.id !== productId);
+    updateCart();
+}
+
+function updateCart() {
+    cartItems.innerHTML = cart.map(item => `
+        <div class="cart-item">
+            <img src="${item.images[0]}" alt="${item.name}">
+            <div class="cart-item-details">
+                <h4>${item.name}</h4>
+                <p>${item.price.toFixed(2)} ريال × ${item.quantity}</p>
+            </div>
+            <button class="btn btn-danger btn-sm" onclick="removeFromCart(${item.id})">
+                <i class="fas fa-trash"></i>
+            </button>
         </div>
     `).join('');
 
-    const modal = new bootstrap.Modal(document.getElementById('productModal'));
-    modal.show();
+    const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    cartTotal.textContent = `${total.toFixed(2)} ريال`;
+    cartCount.textContent = cart.reduce((sum, item) => sum + item.quantity, 0);
 }
 
-// Function to filter products
-function filterProducts() {
-    const selectedCategories = Array.from(document.querySelectorAll('.form-check-input:checked'))
-        .map(checkbox => checkbox.value);
-    
-    const priceRange = document.getElementById('priceRange').value;
-    const sortSelect = document.querySelector('.sort-options select');
-    const sortValue = sortSelect.value;
+// وظائف التصفية
+function handleCategoryFilter(e) {
+    const category = e.target.value;
+    if (e.target.checked) {
+        activeFilters.categories.add(category);
+    } else {
+        activeFilters.categories.delete(category);
+    }
+    applyFilters();
+}
 
-    let filteredProducts = products;
+function handlePriceFilter(e) {
+    activeFilters.maxPrice = parseInt(e.target.value);
+    priceValue.textContent = `${activeFilters.maxPrice} ريال`;
+    applyFilters();
+}
 
-    // Apply category filter
-    if (selectedCategories.length > 0) {
+function handleSizeFilter(e) {
+    const buttons = document.querySelectorAll('.size-btn');
+    buttons.forEach(btn => btn.classList.remove('active'));
+    e.target.classList.add('active');
+    activeFilters.size = e.target.textContent;
+    applyFilters();
+}
+
+function handleSort(e) {
+    activeFilters.sortBy = e.target.value;
+    applyFilters();
+}
+
+function applyFilters() {
+    let filteredProducts = [...products];
+
+    if (activeFilters.categories.size > 0) {
         filteredProducts = filteredProducts.filter(product => 
-            selectedCategories.includes(product.category)
+            activeFilters.categories.has(product.category)
         );
     }
 
-    // Apply price filter
     filteredProducts = filteredProducts.filter(product => 
-        product.price <= priceRange
+        product.price <= activeFilters.maxPrice
     );
 
-    // Apply sorting
-    switch(sortValue) {
+    switch(activeFilters.sortBy) {
         case 'price-low':
             filteredProducts.sort((a, b) => a.price - b.price);
             break;
@@ -183,121 +230,50 @@ function filterProducts() {
             filteredProducts.sort((a, b) => b.id - a.id);
             break;
         case 'featured':
-            filteredProducts.sort((a, b) => (b.featured ? 1 : 0) - (a.featured ? 1 : 0));
+            filteredProducts.sort((a, b) => b.featured - a.featured);
             break;
     }
 
-    // Update product grid
-    const productGrid = document.getElementById('productGrid');
-    productGrid.innerHTML = filteredProducts.map(product => createProductCard(product)).join('');
+    displayProducts(filteredProducts);
 }
 
-// Initialize page
-document.addEventListener('DOMContentLoaded', () => {
-    // Initial product display
-    filterProducts();
-
-    // Set up event listeners
-    document.querySelectorAll('.form-check-input').forEach(checkbox => {
-        checkbox.addEventListener('change', filterProducts);
-    });
-
-    document.getElementById('priceRange').addEventListener('input', (e) => {
-        document.getElementById('priceValue').textContent = formatPrice(Number(e.target.value));
-        filterProducts();
-    });
-
-    document.querySelector('.sort-options select').addEventListener('change', filterProducts);
-
-    // Set initial price range value
-    const priceRange = document.getElementById('priceRange');
-    document.getElementById('priceValue').textContent = formatPrice(Number(priceRange.value));
-});
-
-// Cart and Notifications Functions
-function toggleCart() {
-    const cartSidebar = document.getElementById('cartSidebar');
-    const overlay = document.getElementById('sidebarOverlay');
-    cartSidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
+// نافذة تفاصيل المنتج
+function showProductModal(productId) {
+    const product = products.find(p => p.id === productId);
+    const modal = new bootstrap.Modal(document.getElementById('productModal'));
     
-    // Close notifications if open
-    const notificationsSidebar = document.getElementById('notificationsSidebar');
-    if (notificationsSidebar.classList.contains('active')) {
-        notificationsSidebar.classList.remove('active');
-    }
-}
-
-function toggleNotifications() {
-    const notificationsSidebar = document.getElementById('notificationsSidebar');
-    const overlay = document.getElementById('sidebarOverlay');
-    notificationsSidebar.classList.toggle('active');
-    overlay.classList.toggle('active');
+    document.getElementById('modalProductName').textContent = product.name;
+    document.getElementById('modalProductDescription').textContent = product.description;
+    document.getElementById('modalProductPrice').textContent = `${product.price.toFixed(2)} ريال`;
     
-    // Close cart if open
-    const cartSidebar = document.getElementById('cartSidebar');
-    if (cartSidebar.classList.contains('active')) {
-        cartSidebar.classList.remove('active');
-    }
-}
+    const carouselInner = document.querySelector('#productCarousel .carousel-inner');
+    carouselInner.innerHTML = product.images.map((img, index) => `
+        <div class="carousel-item ${index === 0 ? 'active' : ''}">
+            <img src="${img}" class="d-block w-100" alt="${product.name}">
+        </div>
+    `).join('');
 
-function closeAllSidebars() {
-    const cartSidebar = document.getElementById('cartSidebar');
-    const notificationsSidebar = document.getElementById('notificationsSidebar');
-    const overlay = document.getElementById('sidebarOverlay');
-    
-    cartSidebar.classList.remove('active');
-    notificationsSidebar.classList.remove('active');
-    overlay.classList.remove('active');
-}
+    const quantityInput = document.getElementById('productQuantity');
+    document.getElementById('decreaseQuantity').onclick = () => {
+        if (quantityInput.value > 1) quantityInput.value--;
+    };
+    document.getElementById('increaseQuantity').onclick = () => {
+        quantityInput.value++;
+    };
 
-function addToCart(productId) {
-    // Show success modal
-    const modal = new bootstrap.Modal(document.getElementById('addToCartModal'));
+    document.getElementById('modalAddToCart').onclick = () => {
+        const quantity = parseInt(quantityInput.value);
+        for (let i = 0; i < quantity; i++) {
+            addToCart(product.id);
+        }
+        modal.hide();
+    };
+
     modal.show();
-    
-    // Update cart count
-    const cartBadge = document.querySelector('.fa-shopping-cart + .badge');
-    const currentCount = parseInt(cartBadge.textContent);
-    cartBadge.textContent = currentCount + 1;
-    
-    // You would typically also make an API call here to update the cart in the backend
 }
 
-// Event Listeners
-document.addEventListener('DOMContentLoaded', () => {
-    // Add click event listeners to cart and notification icons
-    document.querySelector('.fa-shopping-cart').parentElement.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleCart();
-    });
-    
-    document.querySelector('.fa-bell').parentElement.addEventListener('click', (e) => {
-        e.preventDefault();
-        toggleNotifications();
-    });
-    
-    // Add click event listeners to remove buttons in cart
-    document.querySelectorAll('.remove-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const cartItem = this.closest('.cart-item');
-            cartItem.style.opacity = '0';
-            setTimeout(() => {
-                cartItem.remove();
-                updateCartTotal();
-            }, 300);
-        });
-    });
-});
-
-function updateCartTotal() {
-    const prices = Array.from(document.querySelectorAll('.cart-item .price'))
-        .map(el => parseFloat(el.textContent.replace('ر.س', '')));
-    
-    const total = prices.reduce((sum, price) => sum + price, 0);
-    document.querySelector('.total-amount').textContent = total.toFixed(2) + ' ر.س';
-    
-    // Update cart badge
-    const cartBadge = document.querySelector('.fa-shopping-cart + .badge');
-    cartBadge.textContent = prices.length;
+// إشعار التوست
+function showToast() {
+    const toast = new bootstrap.Toast(document.getElementById('cartToast'));
+    toast.show();
 } 
