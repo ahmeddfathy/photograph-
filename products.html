@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عدسة سوما - استديو التصوير المتخصص</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">استوديو الذكريات</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">معرض الصور</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">خدماتنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">اتصل بنا</a>
+                    </li>
+                </ul>
+                <div class="nav-icons d-flex align-items-center gap-3">
+                    <a href="#" class="nav-icon position-relative">
+                        <i class="fas fa-bell"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            3
+                        </span>
+                    </a>
+                    <a href="#" class="nav-icon position-relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            2
+                        </span>
+                    </a>
+                    <a href="booking.html" class="btn btn-primary">احجز موعد</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container-fluid py-4">
+        <div class="row">
+            <!-- Filter Sidebar -->
+            <div class="col-lg-3 filter-sidebar">
+                <div class="filter-container">
+                    <h3>تصفية الخدمات</h3>
+                    <div class="filter-section">
+                        <h4>نوع الخدمة</h4>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="newborn" id="newborn">
+                            <label class="form-check-label" for="newborn">تصوير المواليد</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="children" id="children">
+                            <label class="form-check-label" for="children">تصوير الأطفال</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="family" id="family">
+                            <label class="form-check-label" for="family">تصوير عائلي</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="souvenirs" id="souvenirs">
+                            <label class="form-check-label" for="souvenirs">مجسمات تذكارية</label>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <h4>نطاق السعر</h4>
+                        <div class="price-range">
+                            <input type="range" class="form-range" id="priceRange" min="0" max="2000">
+                            <div class="price-labels">
+                                <span>0 ريال</span>
+                                <span id="priceValue">1000 ريال</span>
+                                <span>2000 ريال</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Grid -->
+            <div class="col-lg-9">
+                <div class="section-header mb-4">
+                    <h2>باقاتنا وخدماتنا</h2>
+                    <div class="sort-options">
+                        <select class="form-select glass-select">
+                            <option value="featured">الأكثر طلباً</option>
+                            <option value="price-low">السعر: من الأقل للأعلى</option>
+                            <option value="price-high">السعر: من الأعلى للأقل</option>
+                            <option value="newest">الأحدث</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row g-4" id="productGrid">
+                    <!-- Product cards will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تفاصيل الباقة</h5>
+                    <button type="button" class="btn-close ms-0 me-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <!-- Carousel items will be dynamically added -->
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">السابق</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">التالي</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="modalProductName"></h3>
+                            <p id="modalProductDescription" class="my-3"></p>
+                            <div class="price-section">
+                                <h4 id="modalProductPrice"></h4>
+                            </div>
+                            <ul class="product-includes" id="modalProductIncludes">
+                                <!-- Includes will be dynamically added -->
+                            </ul>
+                            <a href="booking.html" class="btn add-to-cart-btn w-100">احجز موعد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h5>عربة التسوق</h5>
+            <button class="close-btn" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items">
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba?w=500" alt="باقة المولود الجديد">
+                <div class="item-details">
+                    <h6>باقة المولود الجديد</h6>
+                    <p class="price">799.99 ر.س</p>
+                </div>
+                <button class="remove-btn">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+            <div class="cart-item">
+                <img src="https://images.unsplash.com/photo-1612538498456-e861df91d4d0?w=500" alt="باقة الأطفال المميزة">
+                <div class="item-details">
+                    <h6>باقة الأطفال المميزة</h6>
+                    <p class="price">599.99 ر.س</p>
+                </div>
+                <button class="remove-btn">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+            </div>
+        </div>
+        <div class="cart-footer">
+            <div class="total">
+                <span>المجموع:</span>
+                <span class="total-amount">1,399.98 ر.س</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary w-100">إتمام الحجز</a>
+        </div>
+    </div>
+
+    <!-- Notifications Sidebar -->
+    <div class="notifications-sidebar" id="notificationsSidebar">
+        <div class="notifications-header">
+            <h5>الإشعارات</h5>
+            <button class="close-btn" onclick="toggleNotifications()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="notifications-list">
+            <div class="notification-item unread">
+                <i class="fas fa-gift notification-icon"></i>
+                <div class="notification-content">
+                    <p>خصم 20% على باقة المولود الجديد</p>
+                    <small>منذ ساعتين</small>
+                </div>
+            </div>
+            <div class="notification-item unread">
+                <i class="fas fa-calendar-check notification-icon"></i>
+                <div class="notification-content">
+                    <p>تم تأكيد موعد جلسة التصوير</p>
+                    <small>منذ 3 ساعات</small>
+                </div>
+            </div>
+            <div class="notification-item">
+                <i class="fas fa-star notification-icon"></i>
+                <div class="notification-content">
+                    <p>تقييم جديد على خدماتنا</p>
+                    <small>منذ يوم</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="closeAllSidebars()"></div>
+
+    <!-- Add to Cart Modal -->
+    <div class="modal fade" id="addToCartModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تمت الإضافة بنجاح</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fas fa-check-circle text-success fa-3x mb-3"></i>
+                    <p>تمت إضافة الباقة إلى عربة التسوق</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">متابعة التسوق</button>
+                    <a href="cart.html" class="btn btn-primary">عرض العربة</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="glass-footer mt-5">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5>عن عدسة سوما</h5>
+                    <p>استديو متخصص في تصوير الأطفال والعائلات في مدينة أبها، نقدم خدمات تصوير احترافية ومجسمات تذكارية مميزة.</p>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>روابط سريعة</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">سياسة الخصوصية</a></li>
+                        <li><a href="#">الشروط والأحكام</a></li>
+                        <li><a href="#">معلومات الحجز</a></li>
+                        <li><a href="#">الأسئلة الشائعة</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>تواصل معنا</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-snapchat-ghost"></i></a>
+                    </div>
+                    <div class="contact-info mt-3">
+                        <p><i class="fas fa-map-marker-alt me-2"></i> أبها - المملكة العربية السعودية</p>
+                        <p><i class="fas fa-phone me-2"></i> 966+ XXXXXXXXX</p>
+                        <p><i class="fas fa-envelope me-2"></i> info@soma-lens.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">© 2024 عدسة سوما. جميع الحقوق محفوظة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="products.js"></script>
+</body>
+</html> 

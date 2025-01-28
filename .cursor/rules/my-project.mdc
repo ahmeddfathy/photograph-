@@ -1,5 +1,0 @@
----
-description: rules
-globs: 
----
-When working on an AI project that incorporates technologies such as HTML, CSS, JavaScript, Bootstrap, and occasionally Laravel, it's essential to follow best practices to ensure both functionality and maintainability. First, always ensure your HTML structure is clean and semantic, using appropriate tags to improve accessibility and SEO. For CSS, focus on writing modular and reusable styles, avoiding repetition through the use of classes and variables. When using Bootstrap, customize it to fit your design needs while still leveraging its grid system and responsive features. For JavaScript, strive to write efficient, concise, and well-organized code. Make use of functions and modules to keep the codebase manageable and scalable. In the back-end with Laravel, maintain a clean architecture by following the MVC pattern and keeping controllers slim. Also, prioritize readability and avoid repeating code by utilizing helper functions and services. Lastly, keep your designs modern, user-friendly, and responsive, ensuring a seamless experience across devices.
