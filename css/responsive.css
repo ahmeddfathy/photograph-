@@ -369,4 +369,133 @@
         padding: 18px 25px;
         font-size: 1.1rem;
     }
-} 
+}
+
+/* Responsive Typography */
+@media (max-width: 1200px) {
+    :root {
+        --font-size-xxl: 3rem;
+        --font-size-xl: 2.5rem;
+        --font-size-lg: 1.75rem;
+    }
+}
+
+@media (max-width: 992px) {
+    :root {
+        --font-size-xxl: 2.75rem;
+        --font-size-xl: 2.25rem;
+        --font-size-lg: 1.5rem;
+        --font-size-md: 1.1rem;
+    }
+
+    .navbar-brand {
+        font-size: var(--font-size-lg);
+    }
+
+    h1 {
+        font-size: calc(var(--font-size-xxl) * 0.9);
+    }
+
+    h2 {
+        font-size: calc(var(--font-size-xl) * 0.9);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-xxl: 2.5rem;
+        --font-size-xl: 2rem;
+        --font-size-lg: 1.5rem;
+        --font-size-md: 1rem;
+        --font-size-base: 0.95rem;
+    }
+
+    body {
+        line-height: 1.5;
+    }
+
+    .section-title {
+        font-size: calc(var(--font-size-xl) * 0.9);
+    }
+
+    .section-subtitle {
+        font-size: var(--font-size-base);
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --font-size-xxl: 2rem;
+        --font-size-xl: 1.75rem;
+        --font-size-lg: 1.25rem;
+        --font-size-md: 0.95rem;
+    }
+
+    h1 {
+        font-size: calc(var(--font-size-xxl) * 0.85);
+    }
+
+    h2 {
+        font-size: calc(var(--font-size-xl) * 0.85);
+    }
+
+    h3 {
+        font-size: calc(var(--font-size-lg) * 0.9);
+    }
+
+    .navbar-brand {
+        font-size: calc(var(--font-size-lg) * 0.9);
+    }
+
+    .nav-link {
+        font-size: var(--font-size-base);
+    }
+}
+
+/* RTL Specific Responsive Adjustments */
+[dir="rtl"] {
+    @media (max-width: 768px) {
+        .nav-link {
+            text-align: right;
+            padding-right: 1rem !important;
+        }
+    }
+}
+
+/* Mobile Navigation Improvements */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: rgba(0, 0, 0, 0.95);
+        padding: 1rem;
+        border-radius: 10px;
+    }
+
+    .nav-link {
+        padding: 0.5rem 1rem !important;
+        margin: 0.25rem 0;
+    }
+}
+
+/* Form Elements Responsive */
+@media (max-width: 768px) {
+    input, textarea, select {
+        font-size: var(--font-size-base);
+    }
+
+    .btn {
+        font-size: var(--font-size-base);
+        padding: 0.5rem 1.25rem;
+    }
+}
+
+/* Footer Responsive */
+@media (max-width: 768px) {
+    footer h3 {
+        font-size: calc(var(--font-size-lg) * 0.9);
+        margin-bottom: 1rem;
+    }
+
+    footer p {
+        font-size: var(--font-size-base);
+    }
+}

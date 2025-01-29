@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>معرض الصور - استوديو التصوير العائلي</title>
+    <title>معرض الصور - عدسة سوما</title>
     <!-- Bootstrap RTL CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     <!-- Font Awesome -->
@@ -21,7 +21,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
-          <a class="navbar-brand" href="index.html">استوديو الذكريات</a>
+          <a class="navbar-brand" href="index.html">عدسة سوما</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
               <span class="navbar-toggler-icon"></span>
           </button>
@@ -55,11 +55,86 @@
   
   
 
-    <!-- Gallery Header -->
-    <section class="curved-section">
-        <div class="container">
-            <h1 class="text-center text-white mb-3">معرض الصور</h1>
-            <p class="text-center text-white mb-0">مجموعة مختارة من أفضل أعمالنا في التصوير الاحترافي</p>
+  
+    <!-- Gallery Carousel -->
+    <section class="gallery-carousel-section">
+        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+            <!-- Carousel Indicators -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+            </div>
+
+            <!-- Carousel Items -->
+            <div class="carousel-inner">
+                <!-- Outdoor Photo -->
+                <div class="carousel-item active">
+                    <div class="carousel-image-container">
+                        <img src="https://images.unsplash.com/photo-1533227268428-f9ed0900fb3b" class="d-block w-100" alt="خروجات وأنشطة">
+                        <div class="carousel-caption">
+                            <h3>خروجات وأنشطة</h3>
+                            <p>توثيق المغامرات والذكريات الجميلة</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Family Photo -->
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6" class="d-block w-100" alt="جلسة عائلية">
+                        <div class="carousel-caption">
+                            <h3>لحظات عائلية</h3>
+                            <p>ذكريات لا تنسى</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portrait Photo -->
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="https://images.unsplash.com/photo-1623091411395-09e79fdbfcf3" class="d-block w-100" alt="بورتريه شخصي">
+                        <div class="carousel-caption">
+                            <h3>بورتريه احترافي</h3>
+                            <p>صور شخصية مميزة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Birthday Photo -->
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce" class="d-block w-100" alt="حفل عيد ميلاد">
+                        <div class="carousel-caption">
+                            <h3>أعياد ميلاد</h3>
+                            <p>لحظات الفرح والسعادة</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Children Photo -->
+                <div class="carousel-item">
+                    <div class="carousel-image-container">
+                        <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74" class="d-block w-100" alt="تصوير أطفال">
+                        <div class="carousel-caption">
+                            <h3>لحظات الطفولة</h3>
+                            <p>ابتسامات بريئة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 1rem;"></span>
+                <span class="visually-hidden">السابق</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" style="background-color: rgba(0,0,0,0.5); border-radius: 50%; padding: 1rem;"></span>
+                <span class="visually-hidden">التالي</span>
+            </button>
         </div>
     </section>
 
@@ -72,7 +147,7 @@
                 <button data-filter="family">جلسات عائلية</button>
                 <button data-filter="birthday">أعياد ميلاد</button>
                 <button data-filter="portrait">بورتريه</button>
-            </div>
+                </div>
         </div>
     </section>
 
@@ -94,7 +169,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                            </div>
 
                 <div class="col-md-4" data-category="wedding">
                     <div class="gallery-item">
@@ -106,8 +181,8 @@
                                 <a href="https://images.unsplash.com/photo-1511285560929-80b456fea0bc" data-lightbox="gallery" class="gallery-icon">
                                     <i class="fas fa-expand"></i>
                                 </a>
-                            </div>
                         </div>
+                    </div>
                     </div>
                 </div>
 
@@ -222,6 +297,102 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Children Photos -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1612103198005-b238154f4590" alt="تصوير أطفال">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>لحظات الطفولة</h4>
+                                <p>ابتسامات بريئة</p>
+                                <a href="https://images.unsplash.com/photo-1612103198005-b238154f4590" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newborn Photos -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1519689680058-324335c77eba" alt="تصوير مواليد">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>المواليد الجدد</h4>
+                                <p>بداية جديدة</p>
+                                <a href="https://images.unsplash.com/photo-1519689680058-324335c77eba" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Outdoor -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6" alt="تصوير عائلي خارجي">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>جلسات خارجية</h4>
+                                <p>ذكريات في الطبيعة</p>
+                                <a href="https://images.unsplash.com/photo-1609220136736-443140cffec6" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kids Birthday -->
+                <div class="col-md-4" data-category="birthday">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3" alt="عيد ميلاد أطفال">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>أعياد ميلاد الأطفال</h4>
+                                <p>فرحة وسعادة</p>
+                                <a href="https://images.unsplash.com/photo-1464349095431-e9a21285b5f3" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Studio Portrait -->
+                <div class="col-md-4" data-category="portrait">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" alt="بورتريه استوديو">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>تصوير استوديو</h4>
+                                <p>لحظات خالدة</p>
+                                <a href="https://images.unsplash.com/photo-1438761681033-6461ffad8d80" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Family Studio -->
+                <div class="col-md-4" data-category="family">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300" alt="تصوير عائلي استوديو">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>جلسات استوديو</h4>
+                                <p>لمسات احترافية</p>
+                                <a href="https://images.unsplash.com/photo-1511895426328-dc8714191300" data-lightbox="gallery" class="gallery-icon">
+                                    <i class="fas fa-expand"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -231,8 +402,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3>استوديو الذكريات</h3>
-                    <p>نحول لحظاتك الخاصة إلى ذكريات خالدة</p>
+                    <h3>عدسة سوما</h3>
+                    <p>نوثق لحظاتكم الجميلة بلمسة فنية مميزة</p>
                 </div>
                 <div class="col-md-4">
                     <h3>تواصل معنا</h3>
@@ -251,7 +422,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <p>&copy; 2024 استوديو الذكريات. جميع الحقوق محفوظة</p>
+                <p>&copy; 2024 عدسة سوما. جميع الحقوق محفوظة</p>
             </div>
         </div>
     </footer>

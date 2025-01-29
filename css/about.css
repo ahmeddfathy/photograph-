@@ -390,12 +390,19 @@
 
 .value-card h4 {
     color: var(--dark-color);
-    margin-bottom: 1rem;
-    font-size: var(--font-size-lg);
-    font-weight: 700;
+    margin-bottom: 0.75rem;
+    font-size: var(--font-size-md);
+    font-weight: 600;
     position: relative;
     z-index: 1;
     opacity: 0.9;
+    background-image: url("https://images.unsplash.com/photo-1623930376395-0494ba11f035?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80");
+    background-size: cover;
+    background-position: center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
 
 .value-card p {

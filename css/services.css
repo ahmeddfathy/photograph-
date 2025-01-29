@@ -563,4 +563,230 @@
     height: 50px;
     background: linear-gradient(to left bottom, transparent 49%, rgba(var(--primary-rgb), 0.1) 50%);
     z-index: 0;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: scale 20s infinite alternate;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(33, 147, 176, 0.9) 0%, rgba(109, 213, 237, 0.8) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Service Cards */
+.service-detail {
+    background: var(--light-color);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.service-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-detail:hover .service-image img {
+    transform: scale(1.1);
+}
+
+.service-detail .icon-wrapper {
+    width: 70px;
+    height: 70px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -35px auto 20px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-detail .icon-wrapper i {
+    font-size: 30px;
+    color: var(--light-color);
+}
+
+.service-detail h3 {
+    text-align: center;
+    margin: 0 20px 15px;
+    color: var(--dark-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.service-detail p {
+    text-align: center;
+    margin: 0 20px 20px;
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.service-detail ul {
+    padding: 0 40px 30px;
+    margin: 0;
+    list-style: none;
+}
+
+.service-detail ul li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    color: var(--dark-color);
+    opacity: 0.8;
+}
+
+.service-detail ul li i {
+    color: var(--primary-color);
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    padding: 100px 0;
+    position: relative;
+}
+
+.feature-card.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.feature-card.glass-effect:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.feature-card.glass-effect i {
+    font-size: 40px;
+    color: var(--light-color);
+    margin-bottom: 20px;
+}
+
+.feature-card.glass-effect h4 {
+    color: var(--light-color);
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.feature-card.glass-effect p {
+    color: var(--light-color);
+    opacity: 0.9;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .hero-section {
+        height: 50vh;
+        min-height: 400px;
+    }
+
+    .service-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 40vh;
+        min-height: 300px;
+    }
+
+    .service-detail {
+        margin-bottom: 20px;
+    }
+
+    .feature-card.glass-effect {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: 35vh;
+        min-height: 250px;
+    }
+
+    .service-image {
+        height: 180px;
+    }
+
+    .service-detail ul {
+        padding: 0 20px 20px;
+    }
 } 
